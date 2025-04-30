@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0px;
+            background: linear-gradient(to right, rgb(255,255,255),rgb(254,215,173));
+        }
+        .logo{
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+            padding: 10px ;
+            height: 10vh;
+            background-color: rgb(212, 193, 162);
+            
+
+        }
+        .mylogo{
+            color: rgba(109,67,0);
+            font-size: 25px;
+            font-weight: bolder;
+            text-shadow: 0 0 10px rgba(109,67,0);;
+
+            
+        }
+        .logo .nav-link{
+            display: flex;
+            gap: 80px;
+            padding: 5px;
+            align-items: center;
+        }
+        .logo .nav-link .link{
+            color:black;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .logo .nav-link .link:hover{
+            color: rgba(109,67,0);
+            font-weight: bold;
+        }
+        
+        .main-container{
+            width: 100%;
+            height: 60vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .main-container  .image{
+            z-index:-1;
+            width: 60%;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+        }
+        .main-container .image .img{
+            width: 100px;
+            height: 100px;
+        }
+        .main-container.content{
+            color: black;
+            width: 90%;
+            min-height: 100px;
+            float: left;
+        }
+        .content h1{
+            font-size: clamp(1rem,2rem + 5vw,3rem);
+        }
+        
+        .content h1 .types{
+            color: rgba(109,67,0);
+            text-shadow: 0 0 10px rgba(109,67,0);
+            overflow: hidden;
+            display: inline-flex;
+            white-space: nowrap;
+            border-right: 2px solid;
+            animation-name: types;
+            animation-duration: 4s;
+            animation-timing-function: steps(20);
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes types {
+            from {width: 0px;}
+            to {width: 370px;}
+        }
+        .content .typing{
+            font-weight: 600;
+            font-size: clamp(1rem,1rem + 5vw,2rem);
+        }
+        
+        .type {
+            color: rgba(109,67,0);
+            font-size: 2,5rem;
+            text-shadow: 0 0 5px rgba(109,67,0);
+            overflow: hidden;
+            display: inline-flex;
+            white-space: nowrap;
+            border-right: 2px solid;
+            animation-name: type;
+            animation-duration: 4s;
+            animation-timing-function: steps(20);
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes type{
+            from {width: 0px;}
+            to {width: 150px;}
+        }
+        .content p{
+            font-size: clamp(0.4rem,0.2rem + 9vw,1rem);
+            margin: 10px 0;
+            font-size: 20px;
+            padding-right: 10px;
+        }
+        .social-link i{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 3rem;
+            height: 3rem;
+            background-color: transparent;
+            border: 3px solid rgba(109,67,0);
+            border-radius: 50%;
+            color: rgba(109,67,0);
+            margin: 5px 10px;
+            font-size: 1.5rem;
+        }
+        .social-link i:hover{
+            scale: 1.3;
+            color: white;
+            background-color: rgba(109,67,0);
+            filter: drop-shadow(0 0 10px rgb(109,67,0));
+        }
+        .content button{
+            width: 40%;
+            height: 6vh;
+            margin: 30px;
+            background-color: rgb(109,67,0);
+            color: white;
+            border: none;
+            outline: none;
+            font-size: 100%;
+            font-weight: 700;
+            border-radius: 5px;
+            
+        }
+        .content button:hover{
+            scale: 1.1;
+            color: rgb(109,67,0);
+            border: 2px solid rgb(109,67,0);
+            background-color: transparent;
+            font-weight: 700;
+            box-shadow: 0 0 40px rgb(109,67,0);
+        }
+        section {
+            padding: 20px;
+            margin: 25px auto;
+            width: 1200px;
+            height: 270px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            
+        }
+        .sec2 {
+            padding: 20px;
+            margin: 25px auto;
+            width: 1200px;
+            height: 200px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            
+        }
+        .sec3 {
+            padding: 20px;
+            margin: 25px auto;
+            width: 1200px;
+            height: 180px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            
+        }
+        .sec4{
+            padding: 20px;
+            margin: 25px auto;
+            width: 1200px;
+            height: 300px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            
+        }
+        section:hover {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+        section h2 {
+            color: rgb(109,67,0);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f1f1;
+            font-weight: 600;
+            color: rgb(109,67,0);
+            width: 20px;
+            text-align: center;
+        }
+       
+        .sec4 ul li{
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 12px 0;
+            font-size: 1.2rem;
+        }
+        ul li strong {
+            color: rgb(109,67,0);
+        }
+        footer{
+            background-color: rgb(212, 193, 162);
+            color: black;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 22px;
+            text-shadow: 0 0 10px rgb(109,67,0);
+        }
+        .nav-link .conlogo{
+            background-color: transparent;
+            border: 2px solid ;
+            padding: 5px 15px;
+            border-color: rgb(109,67,0);
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            border-radius: 20px;
+        }
+        .nav-link .conlogo:hover{
+            width: 140px;
+            height: 20px;
+            text-align: center;
+            color: white;
+            background-color: rgb(109,67,0);
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <div class="mylogo"><strong>Dedeepya Maddi</strong></div>
+        <div class="nav-link">
+            <a  class="link" href="#home">Home</a>
+            <a class="link" href="#Education">Education</a>
+            <a class="link" href="#skill">Skills</a>
+            <a class="link" href="#certifications">Certifications</a>
+            <a class="link" href="#project">Projects</a>
+            <a class="link" href="#workshop">Workshops</a>
+            <a  class="conlogo" href="#contactus">Contact Details</a>
+        </div>
+    </div>
+    
+        <div class="main-container">
+            <div class="image">
+                <img src="image.jpg"/>
+            </div>
+            <div class="content">
+                <h1>Hey I'm <div class="types">Dedeepya Maddi</div></h1>
+                <div class="typing">I'm a <div class="type">Developer</div></div>
+                <p>I’m a passionate MERN-stack developer who enjoys building efficient, user-friendly applications. I specialize in developing web solutions using modern technologies.I’m driven by problem-solving and creating software that delivers real value and great user experiences.</p>
+                <div class="social-link">
+                    <a href="https://github.com/Dedeepyamaddi"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/dedeepya-maddi-34b272276/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.hackerrank.com/profile/22471A4432"><i class="fa-brands fa-hackerrank"></i></a>
+                </div>
+                <div class="btn">
+                    <button>Download Resume</button>
+                </div>
+            </div>
+        </div>
+    
+    <section class="sec" id="Education">
+        <h2>Education</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th><strong>Qualification</strong></th>
+                    <th>Year</th>
+                    <th>Institution Name</th>
+                    <th>Board</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>B.Tech(DataScience)</td>
+                    <td>2022-2026</td>
+                    <td>Narasaraopeta Engineering College</td>
+                    <td>JNTU</td>
+                    <td>8.71(CGPA)</td>
+                </tr>
+                <tr>
+                    <td>Intermediate</td>
+                    <td>2020-2022</td>
+                    <td>SVKP Jr college</td>
+                    <td>BOIE</td>
+                    <td>94%</td>
+                </tr>
+                <tr>
+                    <td>X</td>
+                    <td>2019-2020</td>
+                    <td>Guntur Oxford</td>
+                    <td>BSEAP</td>
+                    <td>94%</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </section>
+    <section  class="sec2" id="skill">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li><strong>Programming Languages: </strong> C, Python, Java</li>
+            <li><strong>Font-end Technologies: </strong> HTML, CSS, JavaScript</li>
+            <li><strong>Database Technology: </strong> NoSQL, MySQL</li>
+            <li><strong>Analytics Tools:</strong> PowerBI, Looker Studio</li>
+        
+        </ul>
+    </section>
+    <section class="sec" id="certifications">
+        <h2>Traning and Certifications</h2>
+        <ul>
+            <li>Certified from NPTEL in Data Analytics with Python and Joy of computing using Python.</li>
+            <li>Certified from Cod soft in data science.</li>
+            <li>Certified from Infosys in Software Engineering and Agile software development. </li>
+            <li>Complete one week of training on AWS cloud computing. </li>
+            <li>Complete one week of training on Pandas and Numpy.</li>
+            <li>Complete one week of training on Power BI.</li>
+        </ul>
+    </section>
+    <section class="sec3" id="project">
+        <h2>Projects and Internship</h2>
+        <ul>
+            <li>Mini Project-External Sem Result Dashboard.</li>
+            <li>Community Service project-Health and Hygiene.</li>
+            <li>Internship in Data Science.</li>
+        </ul>
+    </section>
+    <section class="sec2" id="workshop">
+        <h2>Workshops</h2>
+        <ul>
+            <li>Attended a workshop on AWS cloud computing.</li>
+            <li>Attended a workshop on Pandas, Numpy and Data Visualization.</li>
+            <li>Attended a workshop on PowerBI.</li>
+            <li>Attended a workshop on UI/UX Design</li>
+        </ul>
+    </section>
+    <section class="sec4" id="contactus">
+        <h2>Personal Details</h2>
+        <ul>
+            <li><strong>Father's Name:</strong> M.V Prasad Rao.</li>
+            <li><strong>Mother's Name:</strong> M.Malleswari.</li>
+            <li><strong>Date of Birth:</strong> 27-07-2005</li>
+            <li><strong>Gender:</strong> Female</li>
+            <li><strong>Email ID:</strong> maddidedeepya@gmail.com</li>
+            <li><strong>Mobile No:</strong> 9121731730</li>
+            <li><strong>Address:</strong> Ammisettyvari veedhi, Sattenapalle, Palnadu(D.T).</li>
+        </ul>
+
+    </section>
+    <footer>Copyright © 2025 -My Portfolio</footer>
+</body>
+</html>
